@@ -1,7 +1,5 @@
 package calculator.calculator;
 
-// используется при проверке оператора
-
 public enum OperatorsList {
     ADDITION("+"),
     SUBTRACTION("-"),

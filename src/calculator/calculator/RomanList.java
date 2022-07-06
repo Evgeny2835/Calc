@@ -1,7 +1,5 @@
 package calculator.calculator;
 
-// используется при работе с римскими числами
-
 public enum RomanList {
     I (1),
     II (2),
@@ -109,7 +107,6 @@ public enum RomanList {
         this.valueRoman = valueRoman;
     }
 
-    // используется при проверке валидности римских чисел
     public static boolean isCorrectRomanList(String roman) {
         for (RomanList element: RomanList.values()) {
             if (element.toString().equals(roman) && element.ordinal() < 10) {
@@ -119,7 +116,6 @@ public enum RomanList {
         return false;
     }
 
-    // используется при конвертации арабских чисел в римские
     public static int romanToArabian(String value) {
         for (RomanList element: RomanList.values()) {
             if (element.toString().equals(value) && element.ordinal() < 10) {
@@ -129,7 +125,6 @@ public enum RomanList {
         return 0;
     }
 
-    // используется при конвертации арабских чисел в римские
     public static String arabianToRoman(int arabian) {
         for (RomanList element: RomanList.values()) {
             if (element.valueRoman == arabian) {
